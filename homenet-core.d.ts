@@ -1,4 +1,4 @@
-declare module 'homenet-core' {
+declare module HomenetCore {
   export function plugin(): (typeConstructor: any) => void;
   export function service(serviceIdentifier: (string)): (target: any, targetKey: string, index?: number) => any;
   export function init(RED: any, config: IConfig): IRuntime;
@@ -399,6 +399,7 @@ declare module 'homenet-core' {
 
     export interface IEventSource {
       on(name: string, cb: Function)
+      removeListener(name: string, cb: Function)
     }
 
     export interface IEventSender {

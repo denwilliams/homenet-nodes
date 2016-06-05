@@ -1,8 +1,6 @@
 export = function(RED) {
-    "use strict";
-
-    var global = RED.settings.functionGlobalContext;
-    var presence = global.presence;
+    const global: HomenetCore.INodeREDContext = RED.settings.functionGlobalContext;
+    const presence: HomenetCore.IPresenceManager = global.services.get<HomenetCore.IPresenceManager>('IPresenceManager');
 
     function NodeIn(config) {
         var self = this;
@@ -24,6 +22,7 @@ export = function(RED) {
                 topic: 'presence/'+id,
                 payload: data
             };
+            console.log('PRESENCE', data);
             if (data) {
                 node.send([msg,null]);
             } else {
@@ -52,5 +51,4 @@ export = function(RED) {
 
     RED.nodes.registerType("presence out",NodeOut);
     RED.nodes.registerType("presence in",NodeIn);
-
 };
