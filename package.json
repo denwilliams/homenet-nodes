@@ -1,0 +1,55 @@
+{
+  "name": "homenet-nodes",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm install && typings install && tsc",
+    "test": "mocha"
+  },
+  "author": "Den Williams",
+  "license": "MIT",
+  "dependencies": {
+    "homenet-core": "^4.0.0-alpha.15"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
+  "keywords": [
+    "homenet"
+  ],
+  "node-red": {
+    "nodes": {
+      "app-event": "nodes/app-event.js",
+      "bump-presence": "nodes/bump-presence.js",
+      "currentlight": "nodes/currentlight.js",
+      "currentpresence": "nodes/currentpresence.js",
+      "dark": "nodes/dark.js",
+      "deserialize": "nodes/deserialize.js",
+      "device-sensor": "nodes/device-sensor.js",
+      "isdark": "nodes/isdark.js",
+      "islight": "nodes/islight.js",
+      "ispresent": "nodes/ispresent.js",
+      "isscene": "nodes/isscene.js",
+      "isweekday": "nodes/isweekday.js",
+      "isweekend": "nodes/isweekend.js",
+      "light": "nodes/light.js",
+      "lights": "nodes/lights.js",
+      "locks": "nodes/locks.js",
+      "media-state": "nodes/media-state.js",
+      "notify": "nodes/notify.js",
+      "presence-parent": "nodes/presence-parent.js",
+      "presence": "nodes/presence.js",
+      "remember": "nodes/remember.js",
+      "scheduler": "nodes/scheduler.js",
+      "secure": "nodes/secure.js",
+      "sensor": "nodes/sensor.js",
+      "timeofday": "nodes/timeofday.js",
+      "current-scene": "node_modules/node-red-contrib-scenes/nodes/current-scene.js",
+      "scene": "node_modules/node-red-contrib-scenes/nodes/scene.js",
+      "scene-startstop": "node_modules/node-red-contrib-scenes/nodes/scene-startstop.js"
+    },
+    "disabled": {
+      "currentscene": "nodes/currentscene.js"
+    }
+  }
+}

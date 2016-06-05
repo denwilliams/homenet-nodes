@@ -1,0 +1,61 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "declaration": false,
+        "listFiles": false
+    },
+    "compilerOptions_disabled": {
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "outFile": "./build/tsc.js",
+        "out": "./built/local/tsc.js",
+        "outDir": "./"
+    },
+    "filesGlob": [
+        "node_modules/homenet-core/homenet-core.d.ts",
+        "typings/index.d.ts",
+        "nodes/**/*.ts"
+    ],
+    "files": [
+        "node_modules/homenet-core/homenet-core.d.ts",
+        "typings/index.d.ts",
+        "nodes/app-event.ts",
+        "nodes/bump-presence.ts",
+        "nodes/currentlight.ts",
+        "nodes/currentpresence.ts",
+        "nodes/currentscene.ts",
+        "nodes/dark.ts",
+        "nodes/deserialize.ts",
+        "nodes/device-sensor.ts",
+        "nodes/isdark.ts",
+        "nodes/islight.ts",
+        "nodes/ispresent.ts",
+        "nodes/isscene.ts",
+        "nodes/isweekday.ts",
+        "nodes/isweekend.ts",
+        "nodes/light.ts",
+        "nodes/lights.ts",
+        "nodes/locks.ts",
+        "nodes/media-state.ts",
+        "nodes/notify.ts",
+        "nodes/presence-parent.ts",
+        "nodes/presence.ts",
+        "nodes/remember.ts",
+        "nodes/scene-startstop.ts",
+        "nodes/scene.ts",
+        "nodes/scheduler.ts",
+        "nodes/secure.ts",
+        "nodes/sensor.ts",
+        "nodes/timeofday.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
