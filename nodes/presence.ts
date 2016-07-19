@@ -1,6 +1,8 @@
+import { INodeREDContext, IPresenceManager } from 'homenet-core';
+
 export = function(RED) {
-    const global: HomenetCore.INodeREDContext = RED.settings.functionGlobalContext;
-    const presence: HomenetCore.IPresenceManager = global.services.get<HomenetCore.IPresenceManager>('IPresenceManager');
+    const global: INodeREDContext = RED.settings.functionGlobalContext;
+    const presence: IPresenceManager = global.services.get<IPresenceManager>('IPresenceManager');
 
     function NodeIn(config) {
         var self = this;

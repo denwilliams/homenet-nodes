@@ -8,7 +8,9 @@
   "author": "Den Williams",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "homenet-core-tsd": "^4.0.0-alpha.1"
+  },
   "keywords": [
     "homenet"
   ],

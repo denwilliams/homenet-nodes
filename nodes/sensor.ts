@@ -1,10 +1,11 @@
 const NAME = 'sensor';
+import { ISensorManager } from 'homenet-core';
 
 export = function(RED) {
 
   var global = RED.settings.functionGlobalContext;
   console.log(global);
-  var sensors = global.sensors;
+  var sensors: ISensorManager = global.sensors;
 
   function NodeOut(config) {
     var self = this;
@@ -18,7 +19,8 @@ export = function(RED) {
     var value = config.value;
 
     this.on('input', function(msg) {
-      sensor.trigger(value || msg.payload);
+      const sensorAny = <any> sensor;
+      if (sensorAny.trigger) sensorAny.trigger(value || msg.payload);
     });
   }
 
@@ -33,10 +35,10 @@ export = function(RED) {
     var sensor = sensors.getInstance(sensorId);
     console.log('DEBUG SENSOR', sensor);
 
-    sensor.onTrigger(onSensorTrigger);
+    sensor.on('trigger', onSensorTrigger);
 
     this.on('close', function() {
-      sensor.removeOnTriggerListener(onSensorTrigger);
+      sensor.removeListener('trigger', onSensorTrigger);
     });
 
     function onSensorTrigger(data) {
