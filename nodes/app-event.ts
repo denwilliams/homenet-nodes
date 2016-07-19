@@ -1,30 +1,27 @@
 export = function(RED) {
-    var global = RED.settings.functionGlobalContext;
-    var eventBus = global.eventBus;
+  var global = RED.settings.functionGlobalContext;
+  var eventBus = global.eventBus;
 
-    function NodeIn(config) {
-        var self = this;
+  function NodeIn(config) {
+    var self = this;
+    var node = this;
+    RED.nodes.createNode(this, config);
+    var evt = config.eid;
 
-        RED.nodes.createNode(this, config);
+    eventBus.on(evt, null, handleEvent);
 
-        var evt = config.eid;
+    this.on('close', function() {
+      eventBus.removeListener(evt, null, handleEvent);
+    });
 
-        var node = this;
-
-        eventBus.on(evt, null, handleEvent);
-
-        this.on('close', function() {
-            eventBus.removeListener(evt, null, handleEvent);
-        });
-
-        function handleEvent(e) {
-            console.log('GOT EVENT ',e);
-            node.send({
-                topic: 'event/'+e.name,
-                payload: e.data
-            });
-        }
+    function handleEvent(e) {
+      console.log('GOT EVENT ',e);
+      node.send({
+        topic: 'event/' + e.name,
+        payload: e.data
+      });
     }
+  }
 
-    RED.nodes.registerType("appevent in", NodeIn);
+  RED.nodes.registerType("appevent in", NodeIn);
 };

@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- node
+- '4'
+- '0.12'
+before_install:
+- npm install
+- npm install -g typescript@1.8.10 typings@1.3.1
+- typings install
+- tsc
+deploy:
+  provider: npm
+  email: work@denwilliams.net
+  api_key:
+    secure: OS6KNPwMft8Hch4BhQUGlrILrpcm6KgWzwR/yZYaqhEEct/tJcGJLs0f3hpFJCYn9QjP0A20RxqJC9bi+qyTqJuVpguSj+O8DtvbkMVE8+rRf7pV/t6Cx3jkzkKIriACwhACSU21jyNgGQRecfl03Io6bAAMEQrive05FP3+f//hfIPNgDV4lcjdkoIb9NrMOfxAJl5tapLIjzGUrSL2Qa3OvntlffZ0I4gs+vUdmKoNtPAUCGD3IXY/egCxhDQ4PqrUgXwPcJwPV61Rmq8bO/ZV93ymiadjLXxlD+wGKOIm+fiKww1tUnX9nycYmtz7Fk/KkKOKGMgKCZuKPHx6RIj7CGgg9ZojiqKYE39s/JyXcjd78TkBja1TiMTLO7kThQTSq94PfeWfkCKvrNkChl3dyvSb1JDHVO5ilLCrs9EfspVVUraMDu3EsJawDEogFy9jxxqZQMo7VlgvinYizbkAdSuGL8P8YVcggbsScRt9lXLyb9PeKONjrgUpFSJgMmSnvbc5B1lnZqEB3+QlNmm8302/wZ9Q5lTuD365wJrA2Czeu5tRX74e9rOZo8GQJK8TFLO5xiaS0aL/wzHbFKGdRvtLIxXAHCJbJ0C1THjU5ErLQfhNgTPf/4iY2+IqyGdqaLtAR563QRYsFFgJtONkz5A4wwNh3BgWpmu88Ic=
+  on:
+    tags: true
+    repo: denwilliams/homenet-nodes

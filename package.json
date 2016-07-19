@@ -1,16 +1,13 @@
 {
   "name": "homenet-nodes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "npm install && typings install && tsc",
     "test": "mocha"
   },
   "author": "Den Williams",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^1.8.10",
-    "typings": "^1.0.4"
-  },
+  "devDependencies": {},
   "keywords": [
     "homenet"
   ],
