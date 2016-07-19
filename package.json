@@ -1,6 +1,6 @@
 {
   "name": "homenet-nodes",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "postinstall": "typings install && tsc",
     "test": ""
@@ -8,7 +8,9 @@
   "author": "Den Williams",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "homenet-core-tsd": "^4.0.0-alpha.1"
+  },
   "keywords": [
     "homenet"
   ],

@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "moduleResolution": "node",
-        "target": "es5",
+        "target": "es6",
         "removeComments": true,
         "preserveConstEnums": true,
         "experimentalDecorators": true,
@@ -19,13 +19,13 @@
         "outDir": "./"
     },
     "filesGlob": [
-        "homenet-core.d.ts",
+        "node_modules/homenet-core-tsd/homenet-core.d.ts",
         "typings/index.d.ts",
         "nodes/**/*.ts"
     ],
     "files": [
-        "homenet-core.d.ts",
         "typings/index.d.ts",
+        "node_modules/homenet-core-tsd/homenet-core.d.ts",
         "nodes/app-event.ts",
         "nodes/bump-presence.ts",
         "nodes/currentlight.ts",
