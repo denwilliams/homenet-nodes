@@ -2,8 +2,8 @@
   "name": "homenet-nodes",
   "version": "0.0.3",
   "scripts": {
-    "build": "npm install && typings install && tsc",
-    "test": "mocha"
+    "postinstall": "typings install && tsc",
+    "test": ""
   },
   "author": "Den Williams",
   "license": "MIT",
