@@ -7,6 +7,7 @@
   },
   "author": "Den Williams",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {},
   "keywords": [
     "homenet"
