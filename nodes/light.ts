@@ -1,8 +1,10 @@
+import { ISunlight } from 'homenet-core';
+
 var name = 'light';
 
 export = function(RED) {
   var global = RED.settings.functionGlobalContext;
-  var sunlight = global.services.get('ISunlight');
+  var sunlight: ISunlight = global.services.get('ISunlight');
 
   function Node(n) {
     RED.nodes.createNode(this,n);

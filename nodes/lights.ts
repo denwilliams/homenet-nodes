@@ -1,6 +1,8 @@
+import { ISwitchManager } from 'homenet-core';
+
 export = function(RED) {
   var global = RED.settings.functionGlobalContext;
-  var switches = global.switches;
+  var switches: ISwitchManager = global.switches;
 
   function Node(config) {
     RED.nodes.createNode(this, config);
