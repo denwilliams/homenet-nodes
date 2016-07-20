@@ -1,8 +1,10 @@
+import { ISunlight } from 'homenet-core';
+
 const name = 'dark';
 
 export = function(RED) {
   var global = RED.settings.functionGlobalContext;
-  var sunlight = global.services.get('ISunlight');
+  var sunlight: ISunlight = global.services.get('ISunlight');
 
   function Node(n) {
     RED.nodes.createNode(this,n);
@@ -16,7 +18,7 @@ export = function(RED) {
     });
 
     function check(data) {
-      var isTrue = (data.value === name);
+      var isTrue = (data === name || data.value === name);
 
       const msg = { payload: isTrue, topic:name };
 
