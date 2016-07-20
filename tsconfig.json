@@ -46,6 +46,7 @@
         "nodes/media-state.ts",
         "nodes/notify.ts",
         "nodes/presence-parent.ts",
+        "nodes/persistence.ts",
         "nodes/presence.ts",
         "nodes/remember.ts",
         "nodes/scene-startstop.ts",

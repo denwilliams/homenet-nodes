@@ -27,15 +27,15 @@
 <script type="text/javascript">
     RED.nodes.registerType('lights',{
         category: 'homenet-output',
-        color:"#F4FA58",
+        color: "#F4FA58",
         defaults: {
             name: { },
-            lightId: { required:true },
-            duration: { },
-            state: {}
+            lightId: { required: true },
+            duration: { value: 0, validate: RED.validators.number() },
+            state: { }
         },
-        inputs:1,
-        outputs:0,
+        inputs: 1,
+        outputs: 1,
         icon: "light.png",
         align: "right",
         label: function() {
@@ -46,7 +46,7 @@
         oneditprepare: function() {
 
             // TODO: load from server
-            var lights = {ids:[]}; // RED.settings.functionGlobalContext.lights;
+            var lights = { ids:[] }; // RED.settings.functionGlobalContext.lights;
 
             // var availableServers = [];
             // var matchedServers = {};
@@ -63,13 +63,13 @@
                 //     $("#node-input-port").val(ui.item.port);
                 // }
             });
-            
+
             var tt = this;
             tt._acOpen = false;
 
             $( "#node-input-lightId" )
             .on( "autocompleteclose", function( event, ui ) { tt._acOpen = false;} );
-            
+
             $( "#node-input-lightId-lookup" )
             .click(function(e) {
                 if (tt._acOpen) {

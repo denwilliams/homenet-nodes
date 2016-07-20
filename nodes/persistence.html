@@ -1,0 +1,69 @@
+<script type="text/javascript">
+    RED.nodes.registerType('get value', {
+        category: 'homenet',
+        color: '#81F781',
+        defaults: {
+            name: { value: "" }
+            key: { value: "", required: true }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || this.key || "get value";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="get value">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-key"></i> Key</label>
+        <input type="text" id="node-input-key" placeholder="mykey">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="get value">
+    <p>Retrieves a value from persistence</p>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('set value', {
+        category: 'homenet',
+        color: '#81F781',
+        defaults: {
+            name: { value: '' },
+            key: { value: '', required: true },
+            val: { value: '' }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || this.key || "set value";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="set value">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-key"></i> Key</label>
+        <input type="text" id="node-input-key" placeholder="mykey">
+    </div>
+    <div class="form-row">
+        <label for="node-input-val"><i class="fa fa-key"></i> Value</label>
+        <input type="text" id="node-input-val" placeholder="myval">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="set value">
+    <p>Retrieves a value from persistence</p>
+</script>
