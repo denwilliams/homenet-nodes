@@ -34,6 +34,7 @@
       "media-state": "nodes/media-state.js",
       "notify": "nodes/notify.js",
       "presence-parent": "nodes/presence-parent.js",
+      "persistence": "nodes/persistence.js",
       "presence": "nodes/presence.js",
       "remember": "nodes/remember.js",
       "scheduler": "nodes/scheduler.js",

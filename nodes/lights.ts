@@ -1,22 +1,31 @@
 import { ISwitchManager } from 'homenet-core';
 
 export = function(RED) {
-  var global = RED.settings.functionGlobalContext;
-  var switches: ISwitchManager = global.switches;
+  const global = RED.settings.functionGlobalContext;
+  const switches: ISwitchManager = global.switches;
 
   function Node(config) {
     RED.nodes.createNode(this, config);
+    const node = this;
+    let timer = null;
+    const lightId = config.lightId;
+    const defaultState = config.state;
+    const duration = config.duration || 0;
+    // const opts = (config.duration) ? {duration:config.duration} : undefined;
 
-    var lightId = config.lightId;
-    var defaultState = config.state;
-
-    //var opts = (config.duration) ? {duration:config.duration} : undefined;
-
-    this.on('input', function(msg) {
-      var state = defaultState || msg.payload;
-
+    node.on('input', msg => {
+      const state = defaultState || msg.payload;
+      if (timer) clearTimeout(timer);
       switches.set('light', lightId, state);
+      timer = setTimeout(() => {
+        node.send(msg);
+      }, duration);
     });
+
+    node.on('close', function() {
+      if (timer) clearTimeout(timer);
+    });
+
   }
 
   RED.nodes.registerType('lights', Node);
