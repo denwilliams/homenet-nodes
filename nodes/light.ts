@@ -18,7 +18,7 @@ export = function(RED) {
     });
 
     function check(data) {
-      var isTrue = (data.value === name);
+      var isTrue = (data === name || data.value === name);
 
       const msg = { payload: isTrue, topic:name };
 
