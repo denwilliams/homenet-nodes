@@ -15,7 +15,6 @@ export = function(RED) {
 
     var sensorId = config.sensorId;
     var sensor = sensors.getInstance(sensorId);
-    console.log('DEBUG SENSOR', sensor);
     var value = config.value;
 
     this.on('input', function(msg) {
@@ -33,7 +32,6 @@ export = function(RED) {
     var sensorId = config.sensorId;
     console.log('sens', sensorId);
     var sensor = sensors.getInstance(sensorId);
-    console.log('DEBUG SENSOR', sensor);
 
     sensor.on('trigger', onSensorTrigger);
 
