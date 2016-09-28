@@ -7,7 +7,7 @@ export = function(RED) {
   function NodeIn(config) {
     const node = this;
     RED.nodes.createNode(node, config);
-    const evt = config.eid;
+    const evt = `button.${config.button}.${config.action}`;
 
     eventBus.on(evt, null, handleEvent);
 
@@ -17,7 +17,7 @@ export = function(RED) {
 
     function handleEvent(e) {
       node.send({
-        topic: 'event/' + e.name,
+        topic: `button/${config.button}/${config.action}`,
         payload: e.data
       });
     }

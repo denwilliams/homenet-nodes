@@ -1,6 +1,6 @@
 {
   "name": "homenet-nodes",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "test": ""
   },
@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "homenet-core-tsd": "^4.0.0-alpha.1"
+    "homenet-core-tsd": "^4.0.0-beta.1"
   },
   "keywords": [
     "homenet"
@@ -16,6 +16,7 @@
   "node-red": {
     "nodes": {
       "app-event": "nodes/app-event.js",
+      "button": "nodes/button.js",
       "bump-presence": "nodes/bump-presence.js",
       "currentlight": "nodes/currentlight.js",
       "currentpresence": "nodes/currentpresence.js",
@@ -31,14 +32,11 @@
       "light": "nodes/light.js",
       "lights": "nodes/lights.js",
       "locks": "nodes/locks.js",
-      "media-state": "nodes/media-state.js",
       "notify": "nodes/notify.js",
-      "presence-parent": "nodes/presence-parent.js",
       "persistence": "nodes/persistence.js",
+      "presence-parent": "nodes/presence-parent.js",
       "presence": "nodes/presence.js",
-      "remember": "nodes/remember.js",
       "scheduler": "nodes/scheduler.js",
-      "secure": "nodes/secure.js",
       "sensor": "nodes/sensor.js",
       "timeofday": "nodes/timeofday.js",
       "current-scene": "node_modules/node-red-contrib-scenes/nodes/current-scene.js",
@@ -46,6 +44,9 @@
       "scene-startstop": "node_modules/node-red-contrib-scenes/nodes/scene-startstop.js"
     },
     "disabled": {
+      "media-state": "nodes/media-state.js",
+      "remember": "nodes/remember.js",
+      "secure": "nodes/secure.js",
       "currentscene": "nodes/currentscene.js"
     }
   }
