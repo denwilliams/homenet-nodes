@@ -16,6 +16,7 @@
   "node-red": {
     "nodes": {
       "app-event": "nodes/app-event.js",
+      "button": "nodes/button.js",
       "bump-presence": "nodes/bump-presence.js",
       "currentlight": "nodes/currentlight.js",
       "currentpresence": "nodes/currentpresence.js",

@@ -27,6 +27,7 @@
         "typings/index.d.ts",
         "node_modules/homenet-core-tsd/homenet-core.d.ts",
         "nodes/app-event.ts",
+        "nodes/button.ts",
         "nodes/bump-presence.ts",
         "nodes/currentlight.ts",
         "nodes/currentpresence.ts",

@@ -1,0 +1,44 @@
+<script type="text/x-red" data-template-name="button in">
+    <div class="form-row node-input-button">
+        <label for="node-input-button"><i class="fa fa-bookmark"></i> Button ID</label>
+        <input class="input-append-left" type="text" id="node-input-button" placeholder="mybutton" style="width: 40%;" >
+    </div>
+    <div class="form-row">
+        <label for="node-input-action"><i class="fa fa-dot-circle-o"></i> Action</label>
+        <select id="node-input-action" style="width:70%; margin-right:5px;">
+            <option value="click">Click</option>
+            <option value="doubleclick">Double Click</option>
+            <option value="hold">Hold</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-tips">
+        Todo: add tips here
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="button in">
+    <p>Button action.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('button in',{
+        category: 'homenet-input',
+        color:"#D358F7",
+        defaults: {
+            name: {},
+            action: {},
+            button: {}
+        },
+        inputs:0,
+        outputs:1,
+        icon: "hash.png",
+        align: "right",
+        label: function() {
+            return this.name || (this.button && (this.button + ' ' + this.action) || 'Button';
+        }
+    });
+</script>
