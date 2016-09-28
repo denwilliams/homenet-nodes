@@ -23,5 +23,5 @@ export = function(RED) {
     }
   }
 
-  RED.nodes.registerType("appevent in", NodeIn);
+  RED.nodes.registerType("button in", NodeIn);
 };
