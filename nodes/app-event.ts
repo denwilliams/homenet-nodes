@@ -1,21 +1,21 @@
+import { IEventBus } from 'homenet-core';
+
 export = function(RED) {
-  var global = RED.settings.functionGlobalContext;
-  var eventBus = global.eventBus;
+  const global = RED.settings.functionGlobalContext;
+  const eventBus: IEventBus = global.services.get('IEventBus');
 
   function NodeIn(config) {
-    var self = this;
-    var node = this;
-    RED.nodes.createNode(this, config);
-    var evt = config.eid;
+    const node = this;
+    RED.nodes.createNode(node, config);
+    const evt = config.eid;
 
     eventBus.on(evt, null, handleEvent);
 
-    this.on('close', function() {
+    node.on('close', () => {
       eventBus.removeListener(evt, null, handleEvent);
     });
 
     function handleEvent(e) {
-      console.log('GOT EVENT ',e);
       node.send({
         topic: 'event/' + e.name,
         payload: e.data
