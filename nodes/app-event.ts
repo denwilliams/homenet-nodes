@@ -12,7 +12,7 @@ export = function(RED) {
     eventBus.on(evt, null, handleEvent);
 
     node.on('close', () => {
-      eventBus.removeListener(evt, null, handleEvent);
+      (<any> eventBus).removeListener(evt, null, handleEvent);
     });
 
     function handleEvent(e) {
