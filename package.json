@@ -1,6 +1,6 @@
 {
-  "name": "homenet-nodes",
-  "version": "0.0.12",
+  "name": "@homenet/nodes",
+  "version": "0.0.13",
   "scripts": {
     "test": ""
   },
@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "homenet-core-tsd": "^4.0.0-beta.1"
+    "@homenet/core-tsd": "^4.0.0-beta.8",
+    "@types/node": "^7.0.4"
   },
   "keywords": [
     "homenet"
