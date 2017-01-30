@@ -1,4 +1,4 @@
-import { INotificationsManager } from 'homenet-core';
+import { INotificationsManager } from '@homenet/core';
 
 export = function(RED) {
   function Node(config) {

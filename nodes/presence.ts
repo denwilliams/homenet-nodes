@@ -1,4 +1,4 @@
-import { INodeREDContext, IPresenceManager } from 'homenet-core';
+import { INodeREDContext, IPresenceManager } from '@homenet/core';
 
 export = function(RED) {
     const global: INodeREDContext = RED.settings.functionGlobalContext;

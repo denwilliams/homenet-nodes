@@ -19,13 +19,12 @@
         "outDir": "./"
     },
     "filesGlob": [
-        "node_modules/homenet-core-tsd/homenet-core.d.ts",
+        "node_modules/@homenet/core-tsd/homenet-core.d.ts",
         "typings/index.d.ts",
         "nodes/**/*.ts"
     ],
     "files": [
-        "typings/index.d.ts",
-        "node_modules/homenet-core-tsd/homenet-core.d.ts",
+        "node_modules/@homenet/core-tsd/homenet-core.d.ts",
         "nodes/app-event.ts",
         "nodes/button.ts",
         "nodes/bump-presence.ts",

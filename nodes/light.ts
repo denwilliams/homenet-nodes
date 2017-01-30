@@ -1,4 +1,4 @@
-import { ISunlight } from 'homenet-core';
+import { ISunlight } from '@homenet/core';
 
 var name = 'light';
 

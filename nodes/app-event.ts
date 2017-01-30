@@ -1,4 +1,4 @@
-import { IEventBus } from 'homenet-core';
+import { IEventBus } from '@homenet/core';
 
 export = function(RED) {
   const global = RED.settings.functionGlobalContext;
