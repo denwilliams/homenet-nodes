@@ -11,7 +11,7 @@ export = function(RED) {
     this.on('input', function(msg) {
       var state = defaultState || msg.payload;
       state = state === 'true' ? true : false;
-      switches.set('lock', lockId, state);
+      switches.set(`lock.${lockId}`, state);
     });
   }
 

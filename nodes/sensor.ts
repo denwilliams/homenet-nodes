@@ -1,5 +1,5 @@
 const NAME = 'sensor';
-import { ISensorManager } from 'homenet-core';
+import { ISensorManager } from '@homenet/core';
 
 export = function(RED) {
 

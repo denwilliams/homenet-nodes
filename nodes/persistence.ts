@@ -1,4 +1,4 @@
-import { IPersistence } from 'homenet-core';
+import { IPersistence } from '@homenet/core';
 
 export = function(RED) {
   function GetValue(config) {

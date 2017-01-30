@@ -1,4 +1,4 @@
-import { ISwitchManager } from 'homenet-core';
+import { ISwitchManager } from '@homenet/core';
 
 export = function(RED) {
   const global = RED.settings.functionGlobalContext;
@@ -16,7 +16,7 @@ export = function(RED) {
     node.on('input', msg => {
       const state = defaultState || msg.payload;
       if (timer) clearTimeout(timer);
-      switches.set('light', lightId, state);
+      switches.set(`light.${lightId}`, state);
       timer = setTimeout(() => {
         node.send(msg);
       }, duration);
