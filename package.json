@@ -39,10 +39,7 @@
       "presence": "nodes/presence.js",
       "scheduler": "nodes/scheduler.js",
       "sensor": "nodes/sensor.js",
-      "timeofday": "nodes/timeofday.js",
-      "current-scene": "node_modules/node-red-contrib-scenes/nodes/current-scene.js",
-      "scene": "node_modules/node-red-contrib-scenes/nodes/scene.js",
-      "scene-startstop": "node_modules/node-red-contrib-scenes/nodes/scene-startstop.js"
+      "timeofday": "nodes/timeofday.js"
     },
     "disabled": {
       "media-state": "nodes/media-state.js",
