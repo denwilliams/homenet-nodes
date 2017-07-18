@@ -24,7 +24,6 @@ export = function(RED) {
                 topic: 'presence/'+id,
                 payload: data
             };
-            console.log('PRESENCE', data);
             if (data) {
                 node.send([msg,null]);
             } else {

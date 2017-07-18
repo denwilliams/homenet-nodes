@@ -3,7 +3,6 @@ export = function(RED) {
         RED.nodes.createNode(this,config);
         var node = this;
         this.on('input', function(msg) {
-        	console.log(RED.settings);
 	        var global = RED.settings.functionGlobalContext;
             global.brain = global.brain || {};
         	var payload =

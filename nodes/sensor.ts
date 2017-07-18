@@ -4,7 +4,6 @@ import { ISensorManager } from '@homenet/core';
 export = function(RED) {
 
   var global = RED.settings.functionGlobalContext;
-  console.log(global);
   var sensors: ISensorManager = global.sensors;
 
   function NodeOut(config) {
@@ -30,7 +29,6 @@ export = function(RED) {
     var node = this;
 
     var sensorId = config.sensorId;
-    console.log('sens', sensorId);
     var sensor = sensors.getInstance(sensorId);
 
     sensor.on('trigger', onSensorTrigger);
