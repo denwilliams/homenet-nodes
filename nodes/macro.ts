@@ -7,7 +7,7 @@ export = function(RED) {
   function MacroNode(config) {
     const node = this;
     RED.nodes.createNode(node, config);
-    const evt = `macro.${config.macro}.execute`;
+    const evt = `macro.${config.macro}.executed`;
 
     eventBus.on(evt, null, handleEvent);
 
