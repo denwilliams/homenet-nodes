@@ -43,6 +43,7 @@
         "nodes/light.ts",
         "nodes/lights.ts",
         "nodes/locks.ts",
+        "nodes/macro.ts",
         "nodes/notify.ts",
         "nodes/presence-parent.ts",
         "nodes/persistence.ts",
