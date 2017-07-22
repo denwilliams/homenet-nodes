@@ -1,6 +1,6 @@
 {
   "name": "@homenet/nodes",
-  "version": "4.0.0-beta.11",
+  "version": "4.0.0-beta.12",
   "scripts": {
     "test": ""
   },
@@ -33,6 +33,7 @@
       "light": "nodes/light.js",
       "lights": "nodes/lights.js",
       "locks": "nodes/locks.js",
+      "macro": "nodes/macro.js",
       "notify": "nodes/notify.js",
       "persistence": "nodes/persistence.js",
       "presence-parent": "nodes/presence-parent.js",
