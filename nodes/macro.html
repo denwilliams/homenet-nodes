@@ -1,0 +1,35 @@
+<script type="text/x-red" data-template-name="macro">
+    <div class="form-row node-input-macro">
+        <label for="node-input-macro"><i class="fa fa-bookmark"></i> Macro ID</label>
+        <input class="input-append-left" type="text" id="node-input-macro" placeholder="mymacro" style="width: 40%;" >
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-tips">
+        Todo: add tips here
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="macro">
+    <p>Macro execute.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('macro',{
+        category: 'homenet-input',
+        color:"#D358F7",
+        defaults: {
+            name: {},
+            macro: {}
+        },
+        inputs:0,
+        outputs:1,
+        icon: "hash.png",
+        align: "right",
+        label: function() {
+            return this.name || this.macro || 'Macro';
+        }
+    });
+</script>
