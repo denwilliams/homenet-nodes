@@ -1,5 +1,4 @@
-import { ICommandManager } from './../homenet-core.d';
-import { IEventBus } from '@homenet/core';
+import { IEventBus, ICommandManager } from '@homenet/core';
 
 export = function(RED) {
   const global = RED.settings.functionGlobalContext;
