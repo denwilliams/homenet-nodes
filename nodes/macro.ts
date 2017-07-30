@@ -29,7 +29,8 @@ export = function(RED) {
     RED.nodes.createNode(node, config);
 
     node.on('input', function(msg) {
-      var args = msg.payload;
+      let args = msg.payload;
+      if (!Array.isArray(args)) args = [args];
       commands.run(`macro.${config.macro}`, 'execute', args);
     });
   }
