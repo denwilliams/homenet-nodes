@@ -34,6 +34,6 @@ export = function(RED) {
     });
   }
 
-  RED.nodes.registerType("macro", MacroNode);
-  RED.nodes.registerType("macro-exec", ExecuteMacroNode);
+  RED.nodes.registerType("macro in", MacroNode);
+  RED.nodes.registerType("macro out", ExecuteMacroNode);
 };

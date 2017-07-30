@@ -1,4 +1,4 @@
-<script type="text/x-red" data-template-name="macro">
+<script type="text/x-red" data-template-name="macro in">
     <div class="form-row node-input-macro">
         <label for="node-input-macro"><i class="fa fa-bookmark"></i> Macro ID</label>
         <input class="input-append-left" type="text" id="node-input-macro" placeholder="mymacro" style="width: 40%;" >
@@ -12,12 +12,12 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="macro">
+<script type="text/x-red" data-help-name="macro in">
     <p>Macro exeucution handler.</p>
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('macro',{
+    RED.nodes.registerType('macro in',{
         category: 'homenet-input',
         color:"#D358F7",
         defaults: {
@@ -38,7 +38,7 @@
 
 
 
-<script type="text/x-red" data-template-name="macro-execute">
+<script type="text/x-red" data-template-name="macro out">
     <div class="form-row node-input-macro">
         <label for="node-input-macro"><i class="fa fa-bookmark"></i> Macro ID</label>
         <input class="input-append-left" type="text" id="node-input-macro" placeholder="mymacro" style="width: 40%;" >
@@ -52,12 +52,12 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="macro-execute">
+<script type="text/x-red" data-help-name="macro out">
     <p>Macro execute.</p>
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('macro-execute',{
+    RED.nodes.registerType('macro out',{
         category: 'homenet-input',
         color:"#D358F7",
         defaults: {
