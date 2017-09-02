@@ -34,6 +34,7 @@
       "lights": "nodes/lights.js",
       "locks": "nodes/locks.js",
       "macro": "nodes/macro.js",
+      "macro-switch": "nodes/macro-switch.js",
       "notify": "nodes/notify.js",
       "persistence": "nodes/persistence.js",
       "presence-parent": "nodes/presence-parent.js",
