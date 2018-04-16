@@ -36,6 +36,7 @@
         "nodes/device-sensor.ts",
         "nodes/isdark.ts",
         "nodes/islight.ts",
+        "nodes/isvalue.ts",
         "nodes/ispresent.ts",
         "nodes/isscene.ts",
         "nodes/isweekday.ts",
