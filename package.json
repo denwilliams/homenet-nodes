@@ -28,6 +28,7 @@
       "islight": "nodes/islight.js",
       "ispresent": "nodes/ispresent.js",
       "isscene": "nodes/isscene.js",
+      "isvalue": "nodes/isvalue.js",
       "isweekday": "nodes/isweekday.js",
       "isweekend": "nodes/isweekend.js",
       "light": "nodes/light.js",
