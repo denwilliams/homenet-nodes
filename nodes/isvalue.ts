@@ -7,7 +7,7 @@ export = function(RED) {
     const { valueId, key, expectedValue } = config;
     const checkValue = JSON.parse(expectedValue);
 
-    var values = RED.settings.functionGlobalContext.services.get('IValueManager');
+    var values = RED.settings.functionGlobalContext.services.get('IValuesManager');
 
     this.on('input', function(msg) {
       const currentValue = values.get(valueId, null, key);
